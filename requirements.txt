@@ -1,4 +1,5 @@
-   fastapi
-   uvicorn[standard]
-   openai
-   python-dotenv
+  fastapi
+uvicorn[standard]
+openai
+python-dotenv
+slowapi
