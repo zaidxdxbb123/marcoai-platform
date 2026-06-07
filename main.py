@@ -14,7 +14,6 @@ client = OpenAI(api_key=api_key)
 
 app = FastAPI()
 
-# Rate limiter: 10 messages per minute per person
 limiter = Limiter(key_func=get_remote_address)
 app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
@@ -74,4 +73,4 @@ document.getElementById('msg').addEventListener('keypress', e => { if(e.key==='E
 def home():
     return html_code
 
-70 lines hidden
+
